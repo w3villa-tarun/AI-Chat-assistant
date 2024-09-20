@@ -97,7 +97,7 @@ function App() {
 
   return (
     <div style={wrapper}>
-      <h1 style={headingStyle}>AI Chat Agent</h1>
+      <h1 style={headingStyle}>AI's Chat Agent</h1>
       <textarea
         style={textAreaStyle}
         value={question}
