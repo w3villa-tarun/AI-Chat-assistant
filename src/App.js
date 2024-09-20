@@ -74,9 +74,10 @@ function App() {
 
   async function generateAnswer() {
     setAnswer("loading...");
+    const apiKey = process.env.REACT_APP_G_API; // Properly reference the environment variable here
 
     const response = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAcviGBxO8U2PWPl94j4EPEFotTC0DKic0",
+      url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
       method: "post",
       data: {
         contents: [
